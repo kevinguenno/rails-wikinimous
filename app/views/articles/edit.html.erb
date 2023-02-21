@@ -5,12 +5,21 @@
     <span class="navbar-brand mb-0 h1"><%= link_to 'New article', new_article_path %></span>
   </div>
 </nav>
-<div class="d-flex flex-column p-2">
   <%= form_with model: @article do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :content %>
-    <%= f.text_field :content %>
-    <%= f.submit %>
+    <div class="row mb-3">
+      <%= f.label :title %>
+      <div class="col-sm-10">
+        <%= f.text_field :title %>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <%= f.label :content %>
+      <div class="col-sm-10">
+        <%= f.text_field :content %>
+      </div>
+    </div>
+      <div class="col-sm-10">
+      <%= f.submit %>
+      </div>
+    </div>
   <% end %>
-</div>

@@ -5,7 +5,6 @@
     <span class="navbar-brand mb-0 h1"><%= link_to 'New article', new_article_path %></span>
   </div>
 </nav>
-
   <%= form_with model: @article do |f| %>
     <div class="row mb-3">
       <%= f.label :title %>
@@ -24,4 +23,3 @@
       </div>
     </div>
   <% end %>
-
