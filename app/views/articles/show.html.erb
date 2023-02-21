@@ -1,0 +1,12 @@
+<nav class="navbar sticky-top bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1"><%= link_to 'Wikinimous', articles_path %></span>
+    <span class="navbar-brand mb-0 h1"><%= link_to 'New article', new_article_path %></span>
+  </div>
+</nav>
+<div class="d-flex flex-column p-2">
+  <h5><%= @article.title %></h5>
+  <p><%= @article.content %></p>
+  <%= link_to 'Edit article', edit_article_path %>
+  <%= link_to 'Delete article', article_path(@article), data: {turbo_method: :delete, turbo_confirm: 'Etes vous sur?'}%>
+</div>

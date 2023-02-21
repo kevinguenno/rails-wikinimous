@@ -1,0 +1,16 @@
+<nav class="navbar sticky-top bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1"><%= link_to 'Wikinimous', articles_path %></span>
+    <span class="navbar-brand mb-0 h1">Edit article</span>
+    <span class="navbar-brand mb-0 h1"><%= link_to 'New article', new_article_path %></span>
+  </div>
+</nav>
+<div class="d-flex flex-column p-2">
+  <%= form_with model: @article do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+  <% end %>
+</div>
